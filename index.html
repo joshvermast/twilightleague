@@ -57,6 +57,10 @@
         .btn-golf:hover {
             background-color: rgb(27, 71, 29); /* Fully opaque deep green on hover */
         }
+        .bg-golf {
+            background-color: rgba(46, 125, 50, 0.8);
+        }
+
 
         .navbar-golf .navbar-brand,
         .navbar-golf .nav-link,
@@ -333,11 +337,13 @@
                     <div class="d-flex justify-content-center flex-grow-1">
                         <button id="open-scoring-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Open Scoring</button>
                         <button id="close-scoring-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Close Scoring</button>
-                        <button id="close-week-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Process Scores & Generate Points</button>
+                        <button id="close-week-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Generate Points</button>
                         <button id="generate-next-week-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Publish Points & Create Next Week</button>
                     </div>
                     <!-- Right Side: Clear Data & Edit Teams -->
                     <div class="d-flex">
+
+                        <button id="edit-live-scramble" class="btn btn-secondary me-2 btn-sm btn-responsive">Edit Scrambles</button>
                         <button id="view-logs-button" class="btn btn-secondary me-2 btn-sm btn-responsive">Logs</button>
                         <button id="admin-page-link" class="btn btn-secondary me-2 btn-sm btn-responsive">Edit Teams/Players</button>
                         <button id="admin-schedule-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Edit Schedule</button>
@@ -373,11 +379,12 @@
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="standingsDropdown">
-                        <a class="dropdown-item text-dark" href="#" id="standings-link">Team Standings</a>
-                        <a class="dropdown-item text-dark" href="#" id="net-rankings">Net Standings</a>
-                        <a class="dropdown-item text-dark" href="#" id="gross-rankings">Gross Standings</a>
+                        <a class="dropdown-item text-dark" href="#" id="team-standings-btn">Team Standings</a>
+                        <a class="dropdown-item text-dark" href="#" id="net-rankings-btn">Net Standings</a>
+                        <a class="dropdown-item text-dark" href="#" id="gross-rankings-btn">Gross Standings</a>
                     </div>
                 </div>
+                <button id="view-live-scramble" class="btn btn-dark m-1 btn-md btn-responsive">Scrambles</button>
                 <button id="schedule-btn" class="btn btn-dark m-1 btn-md btn-responsive">Schedule</button>
             </div>
         </div>
