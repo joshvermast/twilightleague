@@ -208,6 +208,15 @@
             padding: 1rem 1.5rem;
             /* Increase padding */
         }
+            .custom-modal-width {
+            max-width: 90%; /* You can adjust this value to make it wider or narrower */
+        }
+
+        .modal-body {
+            max-height: 75vh; /* Ensures the modal doesn't get too tall on smaller screens */
+            overflow-y: auto;
+        }
+
 
         /* Custom btn-xl style for larger buttons */
         @media (max-width: 1076px) {
@@ -301,23 +310,24 @@
         <div class="spinner"></div>
     </div>
 
-    <!-- Logs Modal (Hidden by Default) -->
-    <div class="modal fade" id="logsModal" tabindex="-1" aria-labelledby="logsModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-scrollable modal-fullscreen-xl-down">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="logsModalLabel">Logs</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="logs-content">
-                    <!-- Logs Table with Search Fields will be injected here -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
+<!-- Logs Modal (Hidden by Default) -->
+<div class="modal fade" id="logsModal" tabindex="-1" aria-labelledby="logsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable modal-fullscreen-xl-down custom-modal-width">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="logsModalLabel">Logs</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="logs-content">
+                <!-- Logs Table with Search Fields will be injected here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
+</div>
+
 
     <!-- Super Admin Navbar -->
     <nav class="navbar navbar-expand-lg k align-center admin-nav" id="super-admin-navbar" style="display: none !important; background-color: #b61b3c;">
