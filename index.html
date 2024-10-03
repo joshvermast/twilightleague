@@ -4,19 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Twilight League</title>
-    <!-- Include Bootstrap CSS for styling -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Select2 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
     <style>
         /* Adjust z-index for Select2 dropdown within Bootstrap modal */
         .select2-container {
-            z-index: 1051 !important; /* Higher than Bootstrap modal backdrop */
+            z-index: 1051 !important;
+            /* Higher than Bootstrap modal backdrop */
         }
+
         /* Custom Responsive Button Sizes */
         .btn-responsive {
             /* Default to btn-md */
@@ -25,6 +24,7 @@
         }
 
         @media (max-width: 576px) {
+
             /* On mobile devices, increase to btn-lg */
             .btn-responsive {
                 font-size: 1.25rem;
@@ -42,20 +42,26 @@
             /* Fallback color */
             color: #ffffff;
             /* Ensure text is visible against dark background */
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         .navbar-golf {
             background-color: rgba(46, 125, 50, 0.8);
             /* Deep green color with transparency */
         }
+
         .btn-golf {
             background-color: rgba(46, 125, 50, 0.8);
-            transition: background-color 0.3s ease; /* Smooth transition */
+            transition: background-color 0.3s ease;
+            /* Smooth transition */
             /* Deep green color with transparency */
         }
+
         .btn-golf:hover {
-            background-color: rgb(27, 71, 29); /* Fully opaque deep green on hover */
+            background-color: rgb(27, 71, 29);
+            /* Fully opaque deep green on hover */
         }
+
         .bg-golf {
             background-color: rgba(46, 125, 50, 0.8);
         }
@@ -139,7 +145,7 @@
             border-color: black transparent transparent transparent;
         }
 
-        .navbar-nav > li {
+        .navbar-nav>li {
             font-size: 14px;
         }
 
@@ -196,6 +202,7 @@
             0% {
                 transform: rotate(0deg);
             }
+
             100% {
                 transform: rotate(360deg);
             }
@@ -207,12 +214,15 @@
             padding: 1rem 1.5rem;
             /* Increase padding */
         }
-            .custom-modal-width {
-            max-width: 90%; /* You can adjust this value to make it wider or narrower */
+
+        .custom-modal-width {
+            max-width: 90%;
+            /* You can adjust this value to make it wider or narrower */
         }
 
         .modal-body {
-            max-height: 75vh; /* Ensures the modal doesn't get too tall on smaller screens */
+            max-height: 75vh;
+            /* Ensures the modal doesn't get too tall on smaller screens */
             overflow-y: auto;
         }
 
@@ -225,83 +235,119 @@
                 padding: 1.5rem 1.5rem;
                 /* Increase padding */
             }
+
             #user-display-name {
-                font-size: 1.5rem; /* larger on larger screens */
+                font-size: 1.5rem;
+                /* larger on larger screens */
             }
+
             #title {
-                font-size: 1.5rem; /* larger on larger screens */
+                font-size: 1.5rem;
+                /* larger on larger screens */
             }
+
             .home-page-btn {
-                padding-top: 4rem!important; /* Triple the original p-4 (1.5rem) */
-                padding-bottom: 4rem!important;
+                padding-top: 4rem !important;
+                /* Triple the original p-4 (1.5rem) */
+                padding-bottom: 4rem !important;
                 /* Maintain original horizontal padding */
                 padding-left: 1.5rem;
                 padding-right: 1.5rem;
                 /* Optional: Adjust font size if needed */
-                font-size: 48px!important;
+                font-size: 48px !important;
                 border-radius: 15px/15px;
             }
+
             .home-pagesub-btn {
-                padding-top: 2rem!important; /* Triple the original p-4 (1.5rem) */
-                padding-bottom: 2rem!important;
+                padding-top: 2rem !important;
+                /* Triple the original p-4 (1.5rem) */
+                padding-bottom: 2rem !important;
                 /* Maintain original horizontal padding */
                 padding-left: 1.5rem;
                 padding-right: 1.5rem;
                 /* Optional: Adjust font size if needed */
-                font-size: 48px!important;
+                font-size: 48px !important;
                 border-radius: 15px/15px;
             }
+
             .rounded {
                 border-radius: 15px/15px;
             }
+
             .modal-dialog {
-                margin : 0;
+                margin: 0;
             }
+
             .modal-full-mobile {
-                width : 100%!important;
+                width: 100% !important;
                 height: 50%;
                 font-size: 3rem;
             }
+
             .modal {
-                --bs-modal-width: 100%!important;
+                --bs-modal-width: 100% !important;
 
             }
+
             .btn-mobile {
                 font-size: 2.5rem;
             }
+
             .form-select {
                 font-size: 2rem;
                 height: 6rem;
             }
+
             .form-control {
                 font-size: 2rem;
                 height: 6rem;
             }
+
             #content {
                 font-size: 1.25rem;
             }
+
             .container {
-                max-width: 99%!important;
+                max-width: 99% !important;
             }
+
             .table {
                 font-size: 1.25rem;
             }
+
             .card-title {
                 font-size: 2rem;
             }
+
             .card-text {
                 font-size: 2rem;
             }
+
             .view-scramble-btn {
-                padding-top: 1.5rem!important; /* Triple the original p-4 (1.5rem) */
-                padding-bottom: 1.5rem!important;
+                padding-top: 1.5rem !important;
+                /* Triple the original p-4 (1.5rem) */
+                padding-bottom: 1.5rem !important;
                 /* Maintain original horizontal padding */
                 /* Optional: Adjust font size if needed */
-                font-size: 2rem!important;
+                font-size: 2rem !important;
                 border-radius: 15px/15px;
             }
         }
     </style>
+    <style>
+        .form-control:focus {
+    outline: 0 !important;
+    border-color: initial;
+    box-shadow: none;
+}
+
+.btn-pos {
+    position:relative;
+    z-index:1;
+    left: -36px;
+}
+    </style>
+
 </head>
 
 <body>
@@ -309,27 +355,25 @@
         <div class="spinner"></div>
     </div>
 
-<!-- Logs Modal (Hidden by Default) -->
-<div class="modal fade" id="logsModal" tabindex="-1" aria-labelledby="logsModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-scrollable modal-fullscreen-xl-down custom-modal-width">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="logsModalLabel">Logs</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="logs-content">
-                <!-- Logs Table with Search Fields will be injected here -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <div class="modal fade" id="logsModal" tabindex="-1" aria-labelledby="logsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable modal-fullscreen-xl-down custom-modal-width">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logsModalLabel">Logs</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="logs-content">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
-    <!-- Super Admin Navbar -->
-    <nav class="navbar navbar-expand-lg k align-center admin-nav" id="super-admin-navbar" style="display: none !important; background-color: #b61b3c;">
+    <nav class="navbar navbar-expand-lg k align-center admin-nav" id="super-admin-navbar"
+        style="display: none !important; background-color: #b61b3c;">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdminSuper"
                 aria-controls="navbarAdminSuper" aria-expanded="false" aria-label="Toggle admin navigation">
@@ -337,24 +381,31 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarAdminSuper">
                 <div class="d-flex w-100 justify-content-between align-items-center">
-                    <!-- Center: Week Buttons -->
                     <div class="d-flex justify-content-left flex-grow-1">
-                        <button id="prepopulate-scores-link" class="btn btn-secondary me-2 btn-sm btn-responsive">Add Random Scores</button>
-                        <button id="clear-scores-link" class="btn btn-secondary me-2 btn-sm btn-responsive">Clear Current Week Scores</button>
-                        <button id="clear-data" class="btn btn-secondary me-2 btn-sm btn-responsive">Clear All Data</button>
-                        <button id="populate-last-scores" class="btn btn-secondary me-2 btn-sm btn-responsive">Randomize PreSeason Scores</button>
-                        <button id="delete-week-link" class="btn btn-secondary me-2 btn-sm btn-responsive">Delete Current Week</button>
-                        <button id="import-player-data" class="btn btn-secondary me-2 btn-sm btn-responsive">Import Player Data</button>
-                        <button id="import-schedule-data" class="btn btn-secondary me-2 btn-sm btn-responsive">Import Schedule Data</button>
-                        <button id="migrate-players" class="btn btn-secondary me-2 btn-sm btn-responsive">Migrate Players</button>
+                        <button id="prepopulate-scores-link" class="btn btn-secondary me-2 btn-sm btn-responsive">Add
+                            Random Scores</button>
+                        <button id="clear-scores-link" class="btn btn-secondary me-2 btn-sm btn-responsive">Clear
+                            Current Week Scores</button>
+                        <button id="clear-data" class="btn btn-secondary me-2 btn-sm btn-responsive">Clear All
+                            Data</button>
+                        <button id="populate-last-scores" class="btn btn-secondary me-2 btn-sm btn-responsive">Randomize
+                            PreSeason Scores</button>
+                        <button id="delete-week-link" class="btn btn-secondary me-2 btn-sm btn-responsive">Delete
+                            Current Week</button>
+                        <button id="import-player-data" class="btn btn-secondary me-2 btn-sm btn-responsive">Import
+                            Player Data</button>
+                        <button id="import-schedule-data" class="btn btn-secondary me-2 btn-sm btn-responsive">Import
+                            Schedule Data</button>
+                        <button id="migrate-players" class="btn btn-secondary me-2 btn-sm btn-responsive">Migrate
+                            Players</button>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Admin Navbar -->
-    <nav class="navbar navbar-expand-lg k align-center admin-nav" id="admin-navbar" style="display: none !important; background-color: #dd321b;">
+    <nav class="navbar navbar-expand-lg k align-center admin-nav" id="admin-navbar"
+        style="display: none !important; background-color: #dd321b;">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin"
                 aria-controls="navbarAdmin" aria-expanded="false" aria-label="Toggle admin navigation">
@@ -362,200 +413,213 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarAdmin">
                 <div class="d-flex w-100 justify-content-between align-items-center">
-                    <!-- Left Side: Add Random Scores -->
                     <div class="d-flex">
-                        <button id="admin-submit-score-link" class="btn btn-secondary me-2 btn-sm btn-responsive">Admin - Enter Score</button>
-                        <button id="admin-show-matchups-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Admin - This Week's Matchup</button>
+                        <button id="admin-submit-score-link" class="btn btn-secondary me-2 btn-sm btn-responsive">Admin
+                            - Enter Score</button>
+                        <button id="admin-show-matchups-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Admin
+                            - This Week's Matchup</button>
                     </div>
                     <div class="d-flex justify-content-center flex-grow-1">
-                        <button id="open-scoring-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Open Scoring</button>
-                        <button id="close-scoring-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Close Scoring</button>
-                        <button id="close-week-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Generate Points</button>
-                        <button id="generate-next-week-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Publish Points & Create Next Week</button>
+                        <button id="open-scoring-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Open
+                            Scoring</button>
+                        <button id="close-scoring-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Close
+                            Scoring</button>
+                        <button id="close-week-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Generate
+                            Points</button>
+                        <button id="generate-next-week-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Publish
+                            Points & Create Next Week</button>
                     </div>
-                    <!-- Right Side: Clear Data & Edit Teams -->
                     <div class="d-flex">
 
-                        <button id="edit-live-scramble" class="btn btn-secondary me-2 btn-sm btn-responsive">Edit Scrambles</button>
+                        <button id="edit-live-scramble" class="btn btn-secondary me-2 btn-sm btn-responsive">Edit
+                            Scrambles</button>
                         <button id="view-logs-button" class="btn btn-secondary me-2 btn-sm btn-responsive">Logs</button>
-                        <button id="admin-page-link" class="btn btn-secondary me-2 btn-sm btn-responsive">Edit Teams/Players</button>
-                        <button id="admin-schedule-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Edit Schedule</button>
+                        <button id="admin-page-link" class="btn btn-secondary me-2 btn-sm btn-responsive">Edit
+                            Teams/Players</button>
+                        <button id="admin-schedule-btn" class="btn btn-secondary me-2 btn-sm btn-responsive">Edit
+                            Schedule</button>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-<!-- Main Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-golf">
-    <div class="container-fluid">
-        <button class="navbar-toggler bg-dark p-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMain"
-        aria-controls="navbarNavMain" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-    </button>
-        <a class="navbar-brand d-flex align-items-center" href="#" id="title">
-            <img src="logo.png" alt="League Logo" class="img-fluid me-2" style="height: 40px;">
-            Kingsville Mens Twilight League
-        </a>
-        <!-- Collapsible Content: Navigation Links -->
-        <div class="collapse navbar-collapse" id="navbarNavMain">
-            <!-- Left Side Links -->
-            <div class="navbar-nav">
-                <a href="#" id="submit-score-link" class="btn btn-dark m-1 btn-md" style="display: none;">Enter Score</a>
-                <button id="view-matchups-link" class="btn btn-dark m-1 btn-md btn-responsive">This Week's Matchup</button>
-                <button id="view-results-btn" class="btn btn-dark m-1 btn-md btn-responsive">Last Week's Results</button>
-                <a href="#" id="score-history-link" class="btn btn-dark m-1 btn-md btn-responsive">History</a>
+    <nav class="navbar navbar-expand-lg navbar-golf">
+        <div class="container-fluid">
+            <button class="navbar-toggler bg-dark p-4" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavMain" aria-controls="navbarNavMain" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <a class="navbar-brand d-flex align-items-center" href="#" id="title">
+                <img src="logo.png" alt="League Logo" class="img-fluid me-2" style="height: 40px;">
+                Kingsville Mens Twilight League
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavMain">
+                <div class="navbar-nav">
+                    <a href="#" id="submit-score-link" class="btn btn-dark m-1 btn-md" style="display: none;">Enter
+                        Score</a>
+                    <button id="view-matchups-link" class="btn btn-dark m-1 btn-md btn-responsive">This Week's
+                        Matchup</button>
+                    <button id="view-results-btn" class="btn btn-dark m-1 btn-md btn-responsive">Last Week's
+                        Results</button>
+                    <a href="#" id="score-history-link" class="btn btn-dark m-1 btn-md btn-responsive">History</a>
 
-                <!-- Standings Dropdown -->
-                <div class="dropdown text-center">
-                    <a class="btn btn-dark btn-md dropdown-toggle m-1 btn-responsive" href="#" role="button" id="standingsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Standings
-                    </a>
+                    <div class="dropdown text-center">
+                        <a class="btn btn-dark btn-md dropdown-toggle m-1 btn-responsive" href="#" role="button"
+                            id="standingsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Standings
+                        </a>
 
-                    <div class="dropdown-menu" aria-labelledby="standingsDropdown">
-                        <a class="dropdown-item text-dark" href="#" id="team-standings-btn">Team Standings</a>
-                        <a class="dropdown-item text-dark" href="#" id="net-rankings-btn">Net Standings</a>
-                        <a class="dropdown-item text-dark" href="#" id="gross-rankings-btn">Gross Standings</a>
+                        <div class="dropdown-menu" aria-labelledby="standingsDropdown">
+                            <a class="dropdown-item text-dark" href="#" id="team-standings-btn">Team Standings</a>
+                            <a class="dropdown-item text-dark" href="#" id="net-rankings-btn">Net Standings</a>
+                            <a class="dropdown-item text-dark" href="#" id="gross-rankings-btn">Gross Standings</a>
+                        </div>
                     </div>
+                    <button id="view-live-scramble" class="btn btn-dark m-1 btn-md btn-responsive">Scrambles</button>
+                    <button id="schedule-btn" class="btn btn-dark m-1 btn-md btn-responsive">Schedule</button>
                 </div>
-                <button id="view-live-scramble" class="btn btn-dark m-1 btn-md btn-responsive">Scrambles</button>
-                <button id="schedule-btn" class="btn btn-dark m-1 btn-md btn-responsive">Schedule</button>
             </div>
-        </div>
 
-        <!-- Always Visible Login/Register/Logout Section -->
-        <ul class="navbar-nav ms-auto d-flex align-items-center text-center">
-            <!-- Username and Logout Button (Visible When Logged In) -->
-            <li class="nav-item d-flex align-items-center" id="user-section" style="display: none!important;">
-                <span id="user-display-name" class="navbar-text me-2 " style="color: white;"></span>
-                <button id="logout-button" class="btn btn-dark btn-responsive" type="button" onclick="logoutUser()">Logout</button>
-            </li>
+            <ul class="navbar-nav ms-auto d-flex align-items-center text-center">
+                <li class="nav-item d-flex align-items-center" id="user-section" style="display: none!important;">
+                    <span id="user-display-name" class="navbar-text me-2 " style="color: white;"></span>
+                    <button id="logout-button" class="btn btn-dark btn-responsive" type="button"
+                        onclick="logoutUser()">Logout</button>
+                </li>
 
-            <!-- Login and Register Buttons (Visible When Not Logged In) -->
-            <li class="nav-item d-flex align-items-center text-center" id="auth-buttons" style="display: none!important;"">
-                <button class="btn btn-dark me-2 btn-responsive" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <li class="nav-item d-flex align-items-center text-center" id="auth-buttons"
+                    style="display: none!important;"">
+                <button class=" btn btn-dark me-2 btn-responsive" type="button" data-bs-toggle="modal"
+                    data-bs-target="#loginModal">
                     Login
-                </button>
-                <button class="btn btn-dark btn-responsive" type="button" data-bs-toggle="modal" data-bs-target="#registerModal">
-                    Register
-                </button>
-            </li>
-        </ul>
+                    </button>
+                    <button class="btn btn-dark btn-responsive" type="button" data-bs-toggle="modal"
+                        data-bs-target="#registerModal">
+                        Register
+                    </button>
+                </li>
+            </ul>
 
-    </div>
-</nav>
+        </div>
+    </nav>
 
 
-    <!-- Content Area -->
     <div class="container mt-4">
         <div id="content">
-            <!-- Dynamic content will be injected here -->
         </div>
     </div>
 
-    <!-- Alert Modal -->
-    <div class="modal fade modal-full-mobile" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+    <div class="modal fade modal-full-mobile" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-full-mobile">
             <div class="modal-content modal-full-mobile">
                 <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title btn-mobile" id="alertModalLabel"> <i class="bi bi-info-circle-fill me-2"></i> Notification</h5>
+                    <h5 class="modal-title btn-mobile" id="alertModalLabel"> <i class="bi bi-info-circle-fill me-2"></i>
+                        Notification</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-dark" id="alertModalMessage"></div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success btn-responsive btn-mobile" id="alertModalOK">OK</button>
+                    <button type="button" class="btn btn-success btn-responsive btn-mobile"
+                        id="alertModalOK">OK</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Confirmation Modal -->
-    <div class="modal fade modal-full-mobile" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal fade modal-full-mobile" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-full-mobile">
             <div class="modal-content modal-full-mobile">
                 <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title btn-mobile" id="confirmModalLabel"> <i class="bi bi-info-circle-fill me-2"></i> Confirm</h5>
+                    <h5 class="modal-title btn-mobile" id="confirmModalLabel"> <i
+                            class="bi bi-info-circle-fill me-2"></i> Confirm</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-dark" id="confirmModalMessage"></div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-responsive btn-mobile" id="confirmModalCancel">Cancel</button>
-                    <button type="button" class="btn btn-golf text-light btn-responsive btn-mobile" id="confirmModalOK">OK</button>
+                    <button type="button" class="btn btn-secondary btn-responsive btn-mobile"
+                        id="confirmModalCancel">Cancel</button>
+                    <button type="button" class="btn btn-golf text-light btn-responsive btn-mobile"
+                        id="confirmModalOK">OK</button>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- Registration Modal -->
-<div class="modal fade modal-full-mobile btn-mobile" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form id="register-form">
-                <div class="modal-header bg-dark text-light">
-                    <h5 class="modal-title text-light modal-full-mobile btn-mobile" id="registerModalLabel">Register</h5>
-                    <button type="button" class="btn-close text-light btn-dark" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Player Selection Dropdown -->
-                    <div class="mb-3">
-                        <label for="register-player-select" class="form-label text-dark">Select Your Name</label>
-                        <select id="register-player-select" class="form-select text-dark" required>
-                            <option value="">-- Select Player --</option>
-                            <!-- Options will be populated dynamically -->
-                        </select>
+    <div class="modal fade modal-full-mobile btn-mobile" id="registerModal" tabindex="-1"
+        aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="register-form">
+                    <div class="modal-header bg-dark text-light">
+                        <h5 class="modal-title text-light modal-full-mobile btn-mobile" id="registerModalLabel">Register
+                        </h5>
+                        <button type="button" class="btn-close text-light btn-dark" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
-                    <!-- Email and Member Number Fields -->
-                    <div class="mb-3">
-                        <label for="register-email" class="form-label text-dark">Email address</label>
-                        <input type="email" class="form-control text-dark" id="register-email" required>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="register-player-select" class="form-label text-dark">Select Your Name</label>
+                            <select id="register-player-select" class="form-select text-dark" required>
+                                <option value="">-- Select Player --</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-email" class="form-label text-dark">Email address</label>
+                            <input type="email" class="form-control text-dark" id="register-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-password" class="form-label text-dark">Member Number</label>
+                            <input type="password" class="form-control text-dark" id="register-password" required>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="register-password" class="form-label text-dark">Member Number</label>
-                        <input type="password" class="form-control text-dark" id="register-password" required>
+                    <div class="modal-footer">
+                        <button type="submit"
+                            class="btn btn-golf text-light btn-responsive btn-mobile">Register</button>
+                        <button type="button" class="btn btn-secondary btn-responsive btn-mobile"
+                            data-bs-dismiss="modal">Close</button>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-golf text-light btn-responsive btn-mobile">Register</button>
-                    <button type="button" class="btn btn-secondary btn-responsive btn-mobile" data-bs-dismiss="modal">Close</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
 
 
-<div class="modal fade modal-full-mobile btn-mobile" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form id="login-form-modal">
-                <div class="modal-header bg-dark text-light">
-                    <h5 class="modal-title text-light modal-full-mobile btn-mobile " id="loginModalLabel">Login</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Email and Member Number Fields -->
-                    <div class="mb-3">
-                        <label for="login-email-modal" class="form-label text-dark">Email address</label>
-                        <input type="email" class="form-control text-dark" id="login-email-modal" required>
+    <div class="modal fade modal-full-mobile btn-mobile" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="login-form-modal">
+                    <div class="modal-header bg-dark text-light">
+                        <h5 class="modal-title text-light modal-full-mobile btn-mobile " id="loginModalLabel">Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="mb-3">
-                        <label for="login-password-modal" class="form-label text-dark">Member Number</label>
-                        <input type="password" class="form-control text-dark" id="login-password-modal" required>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="login-email-modal" class="form-label text-dark">Email address</label>
+                            <input type="email" class="form-control text-dark" id="login-email-modal" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="login-password-modal" class="form-label text-dark">Member Number</label>
+                            <input type="password" class="form-control text-dark" id="login-password-modal" required>
+                        </div>
+                        <div id="login-error" class="alert alert-danger" style="display: none;"></div>
                     </div>
-                    <!-- Error Message Div -->
-                    <div id="login-error" class="alert alert-danger" style="display: none;"></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-golf text-light  btn-responsive btn-mobile">Login</button>
-                    <button type="button" class="btn btn-secondary btn-responsive btn-mobile" data-bs-dismiss="modal">Close</button>
-                </div>
-            </form>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-golf text-light  btn-responsive btn-mobile">Login</button>
+                        <button type="button" class="btn btn-secondary btn-responsive btn-mobile"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
-    <!-- Enter Score Modal -->
-    <div class="modal fade" id="enterScoreModal" tabindex="-1" aria-labelledby="enterScoreModalLabel" aria-hidden="true">
+    <div class="modal fade" id="enterScoreModal" tabindex="-1" aria-labelledby="enterScoreModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-white">
@@ -568,12 +632,12 @@
                             <label for="player-select" class="form-label">Select Your Name:</label>
                             <select id="player-select" class="form-select">
                                 <option value="">-- Select Player --</option>
-                                <!-- Options will be populated dynamically -->
                             </select>
                         </div>
                         <div class="mb-3">
                             <label for="score-input" class="form-label">Enter Gross Score:</label>
-                            <input type="number" id="score-input" class="form-control" min="0" placeholder="e.g., 72" required>
+                            <input type="number" id="score-input" class="form-control" min="0" placeholder="e.g., 72"
+                                required>
                         </div>
                         <button type="submit" class="btn btn-success btn-responsive w-100">Submit Score</button>
                     </form>
@@ -583,8 +647,8 @@
         </div>
     </div>
 
-    <!-- Admin Enter Score Modal -->
-    <div class="modal fade" id="adminEnterScoreModal" tabindex="-1" aria-labelledby="adminEnterScoreModalLabel" aria-hidden="true">
+    <div class="modal fade" id="adminEnterScoreModal" tabindex="-1" aria-labelledby="adminEnterScoreModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <form id="admin-score-form">
@@ -593,42 +657,33 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- Player Selection Dropdown -->
                         <div class="mb-3">
                             <label for="admin-player-select" class="form-label text-dark">Select Player</label>
                             <select id="admin-player-select" class="form-select text-dark" required>
                                 <option value="">-- Select Player --</option>
-                                <!-- Options will be populated dynamically -->
                             </select>
                         </div>
-                        <!-- Gross Score Input -->
                         <div class="mb-3">
                             <label for="admin-score-input" class="form-label text-dark">Enter Gross Score</label>
-                            <input type="number" id="admin-score-input" class="form-control" min="0" placeholder="e.g., 36" required>
+                            <input type="number" id="admin-score-input" class="form-control" min="0"
+                                placeholder="e.g., 36" required>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-golf text-light btn-responsive">Submit Score</button>
-                        <button type="button" class="btn btn-secondary btn-responsive" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary btn-responsive"
+                            data-bs-dismiss="modal">Close</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- Include Bootstrap JS (for navbar toggling and modals) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Include jQuery (required for Select2) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Include Select2 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
-
-
-
-    <!-- Your Main Script as a Module -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js"></script>
     <script type="module" src="script.js"></script>
     <script type="module" src="admin.js"></script>
 </body>
