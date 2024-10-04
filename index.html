@@ -41,8 +41,7 @@
             background-color: #f0f8ff;
             /* Fallback color */
             color: #ffffff;
-            /* Ensure text is visible against dark background */
-            font-family: Arial, Helvetica, sans-serif;
+
         }
 
         .navbar-golf {
@@ -226,14 +225,82 @@
             overflow-y: auto;
         }
 
+        /* Ensure all table cells are centered vertically and horizontally */
+        .table-bordered-schedule td,
+        .table-bordered-schedule th {
+            text-align: center;
+            vertical-align: middle;
+            padding: 15px;
+        }
 
-        /* Custom btn-xl style for larger buttons */
+        /* Schedule specific table border styling */
+        .table-bordered-schedule {
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 2px solid #000;
+            /* Outer table border */
+        }
+
+        .table-bordered-schedule th,
+        .table-bordered-schedule td {
+            border: 1px solid #666;
+            /* Inner cell borders */
+            padding: 10px;
+            /* Adjust padding to balance the look */
+            vertical-align: middle;
+            /* Ensures vertical centering */
+        }
+
+        /* Optional: Add rounded corners for a modern look */
+        .table-bordered-schedule {
+            border-radius: 8px;
+            overflow: hidden;
+            /* Ensures the border radius applies to the table */
+        }
+
+        /* Add stronger borders for header cells */
+        .table-bordered-schedule .table-dark th {
+            border: 2px solid #000;
+            /* Darker border for table header */
+        }
+
+        /* Add shadow to improve the table’s look */
+        .table-bordered-schedule.table-responsive {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow */
+        }
+
+
         @media (max-width: 1076px) {
+            .points-column {
+                white-space: nowrap;
+            }
+
+            .points-column::before {
+                content: "Pts";
+                /* Replace Points with Pts */
+            }
+
+            .points-column {
+                visibility: hidden;
+                /* Hide the original Points text */
+            }
+
+            .points-column::before {
+                visibility: visible;
+                /* Make the 'Pts' text visible */
+                display: inline-block;
+            }
+
             .navbar-nav .btn {
                 font-size: 1.5rem;
                 /* Increase font size */
                 padding: 1.5rem 1.5rem;
                 /* Increase padding */
+            }
+
+            .matchchell {
+                width: 50px;
             }
 
             #user-display-name {
@@ -289,10 +356,6 @@
 
             }
 
-            .btn-mobile {
-                font-size: 2.5rem;
-            }
-
             .form-select {
                 font-size: 2rem;
                 height: 6rem;
@@ -333,19 +396,72 @@
                 border-radius: 15px/15px;
             }
         }
+
+        /* Styling for clear button on mobile */
+        .clear-btn-mobile {
+            width: 35px;
+            /* Slightly larger to be more tappable */
+            height: 35px;
+            /* Consistent height */
+            font-size: 18px;
+            /* Adequate size for the 'X' icon */
+            line-height: 1;
+            /* Keep the icon centered */
+            display: flex;
+            /* Flexbox for centering */
+            justify-content: center;
+            /* Horizontally center the icon */
+            align-items: center;
+            /* Vertically center the icon */
+            padding: 0;
+            /* Remove extra padding */
+            margin-left: 10px;
+            /* Add space between button and input */
+            background-color: transparent;
+            /* Transparent background */
+            border: none;
+            /* No border */
+            border-radius: 50%;
+            /* Circle shape for mobile aesthetics */
+            position: relative;
+            /* Proper alignment with the search box */
+        }
+
+        /* Mobile-specific adjustments */
+        @media (max-width: 1076px) {
+            .clear-btn-mobile {
+                width: 75px;
+                /* Slightly bigger for smaller screens */
+                height: 40px;
+                font-size: 2.5rem;
+                margin-left: -45px;
+                /* Adjust margin to move closer to input on mobile */
+                position: absolute;
+                right: 35px;
+                /* Keep aligned on the right of the input */
+                top: 50%;
+                /* Vertically center it */
+                transform: translateY(-50%);
+                /* Ensure perfect vertical alignment */
+            }
+
+            .navbar-brand {
+                font-size: 2rem !important;
+            }
+        }
     </style>
     <style>
         .form-control:focus {
-    outline: 0 !important;
-    border-color: initial;
-    box-shadow: none;
-}
+            outline: 0 !important;
+            border-color: initial;
+            box-shadow: none;
+        }
 
-.btn-pos {
-    position:relative;
-    z-index:1;
-    left: -36px;
-}
+        .btn-pos {
+            position: relative;
+            z-index: 1;
+            left: -36px;
+        }
     </style>
 
 </head>
@@ -445,21 +561,11 @@
     </nav>
     <nav class="navbar navbar-expand-lg navbar-golf">
         <div class="container-fluid">
-            <button class="navbar-toggler bg-dark p-4" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNavMain" aria-controls="navbarNavMain" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-            </button>
+
             <a class="navbar-brand d-flex align-items-center" href="#" id="title">
                 <img src="logo.png" alt="League Logo" class="img-fluid me-2" style="height: 40px;">
                 Kingsville Mens Twilight League
             </a>
-            <div class="collapse navbar-collapse" id="navbarNavMain">
-                <div class="navbar-nav">
-                  <button id="home" class="btn btn-dark m-1 btn-md btn-responsive">Home</button>
-                 </div>
-            </div>
-
             <ul class="navbar-nav ms-auto d-flex align-items-center text-center">
                 <li class="nav-item d-flex align-items-center" id="user-section" style="display: none!important;">
                     <span id="user-display-name" class="navbar-text me-2 " style="color: white;"></span>
@@ -468,10 +574,10 @@
                 </li>
 
                 <li class="nav-item d-flex align-items-center text-center" id="auth-buttons"
-                    style="display: none!important;"">
-                <button class=" btn btn-dark me-2 btn-responsive" type="button" data-bs-toggle="modal"
-                    data-bs-target="#loginModal">
-                    Login
+                    style="display: none!important;">
+                    <button class=" btn btn-dark me-2 btn-responsive" type="button" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">
+                        Login
                     </button>
                     <button class="btn btn-dark btn-responsive" type="button" data-bs-toggle="modal"
                         data-bs-target="#registerModal">
